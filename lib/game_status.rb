@@ -51,9 +51,7 @@ def over?(board)
   end
 
 def winner(board)
-board.index.each do |x|
-  if x == WIN_COMBINATIONS
-    return true
-  end
-end
+ if cmbo = won?(board)
+  board[cmbo.first]
+ end
 end
