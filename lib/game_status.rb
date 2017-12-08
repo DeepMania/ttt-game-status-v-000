@@ -47,17 +47,11 @@ def draw?(board)
 end
 
 def over?(board)
-  draw_board = draw?(board)
-  game_won = won?(board)
-  full_board = full?(board)
+ draw?(board) || full?(board) || won?(board)
 
-   if draw_board == true || game_won == true || full_board == true
-     return true
-   elsif game_won == true || full_board == false || draw_board == false
-     return true
-   elsif game_won == false || full_board == false || draw_board == false
-      return false
-   end
+
+
+   
   end
 
 def winner(board)
